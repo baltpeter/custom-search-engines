@@ -1,5 +1,5 @@
-engine/*.html
-engine/opensearch/*.xml
+public/engine/*.html
+public/engine/opensearch/*.xml
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,windows,linux,macos,visualstudiocode,jetbrains,sublimetext

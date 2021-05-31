@@ -10,7 +10,7 @@ const template = (body, is_home = false, additional_header = '') => `<!DOCTYPE h
     ${additional_header}
 </head>
 <body>
-    <a href="https://github.com/baltpeter/custom-search-engines"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/baltpeter/custom-search-engines"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme.png" alt="Fork me on GitHub"></a>
     ${body}
     <footer>
         ${is_home ? '' : '<a href="/">🢐 back</a>'}
@@ -64,11 +64,11 @@ const engine_xml_template = (
 const engines = require('./engines.json');
 
 for (const e of engines) {
-    fs.writeFileSync(path.join(__dirname, 'engine', e.slug + '.html'), engine_html_template(e));
-    fs.writeFileSync(path.join(__dirname, 'engine', 'opensearch', e.slug + '.xml'), engine_xml_template(e));
+    fs.writeFileSync(path.join(__dirname, 'public', 'engine', e.slug + '.html'), engine_html_template(e));
+    fs.writeFileSync(path.join(__dirname, 'public', 'engine', 'opensearch', e.slug + '.xml'), engine_xml_template(e));
 }
 
 const rows = engines
     .map((e) => `<li><a href="/engine/${e.slug}.html"><img class="engine-icon" src="${e.icon}">${e.name}</a></li>`)
     .join('\n');
-fs.writeFileSync(path.join(__dirname, 'index.html'), index_template(rows));
+fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), index_template(rows));

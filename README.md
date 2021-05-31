@@ -10,7 +10,7 @@ The suggested workaround is to [create an addon](https://developer.mozilla.org/e
 This leaves [OpenSearch descriptions](https://developer.mozilla.org/en-US/docs/Web/OpenSearch) as the only sort-of viable method. So, here are my custom search engines as OpenSearch descriptions.
 
 This repo contains a very simple script that generates a webpage exposing my custom search engines as OpenSearch descriptions. They are generated from the [`engines.json` file](engines.json). Run the script using: `node build.js`  
-A live version is available at: [search-engines.netlify.app](https://search-engines.netlify.app/)
+A live version is available at: [search-engines.bn.al](https://search-engines.bn.al/)
 
 My search engines probably aren't useful for you. Feel free to try them, though.
 
